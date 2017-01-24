@@ -1,9 +1,16 @@
-# HTTPServerTest
-HTTPServerTest
+SimpleFramework
 
-## Result Tests
+miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8080/fastdata"
+Running 30s test @ http://localhost:8080/fastdata
+  4 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     7.76ms    9.70ms 451.60ms   98.66%
+    Req/Sec    16.78k     3.40k   23.34k    80.83%
+  2004260 requests in 30.03s, 420.51MB read
+Requests/sec:  66733.48
+Transfer/sec:     14.00MB
 
-### Spark
+Spark
 
 miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8081/fastdata"
 Running 30s test @ http://localhost:8081/fastdata
@@ -16,7 +23,19 @@ Running 30s test @ http://localhost:8081/fastdata
 Requests/sec:  51474.08
 Transfer/sec:     14.53MB
 
-### SimpleFramework 
+UndertowIO
+
+miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8082/fastdata"
+Running 30s test @ http://localhost:8082/fastdata
+  4 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.98ms   20.67ms 799.88ms   99.42%
+    Req/Sec    55.15k    12.53k   95.40k    81.72%
+  6591898 requests in 30.10s, 1.66GB read
+Requests/sec: 219002.84
+Transfer/sec:     56.39MB
+
+SimpleFramework - Try 2
 
 miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8080/fastdata"
 Running 30s test @ http://localhost:8080/fastdata
@@ -28,7 +47,7 @@ Running 30s test @ http://localhost:8080/fastdata
 Requests/sec:  72104.34
 Transfer/sec:     15.13MB
 
-### UndertowIO
+UndertowIO - Try 2
 
 miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8082/fastdata"
 Running 30s test @ http://localhost:8082/fastdata
@@ -39,4 +58,3 @@ Running 30s test @ http://localhost:8082/fastdata
   6692640 requests in 30.03s, 1.68GB read
 Requests/sec: 222888.38
 Transfer/sec:     57.39MB
-

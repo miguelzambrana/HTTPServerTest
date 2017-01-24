@@ -1,0 +1,19 @@
+group 'FastHttp'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile('org.simpleframework:simple:5.1.6')
+    compile('com.sparkjava:spark-core:2.5.4')
+    compile('io.undertow:undertow-core:1.2.11.Final')
+    compile('io.undertow:undertow-servlet:1.2.11.Final')
+    compile('io.undertow:undertow-websockets-jsr:1.2.11.Final')
+}
