@@ -1,10 +1,22 @@
 # HTTPServerTest
 HTTPServerTest
 
-## Result Tests
+## Comparing with wrk the following http libs:
+- Spark
+- SimpleFramework
+- UndertowIO
+
+## Using WRK for the tests
+- More info in the [wrk site](https://github.com/wg/wrk)
+
+## And, action!!!!
+![Go go go!](http://orig09.deviantart.net/9b21/f/2013/018/6/b/my_first_full_body_fight_by_catasthrophy-d5rvgyz.gif)
 
 ### Spark
+[Spark](http://sparkjava.com/)
 
+
+```
 miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8081/fastdata"
 Running 30s test @ http://localhost:8081/fastdata
   4 threads and 500 connections
@@ -15,9 +27,12 @@ Running 30s test @ http://localhost:8081/fastdata
   Socket errors: connect 0, read 0, write 0, timeout 246
 Requests/sec:  51474.08
 Transfer/sec:     14.53MB
+```
 
 ### SimpleFramework 
+[Simple Framework](http://www.simpleframework.org/)
 
+```
 miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8080/fastdata"
 Running 30s test @ http://localhost:8080/fastdata
   4 threads and 500 connections
@@ -27,9 +42,12 @@ Running 30s test @ http://localhost:8080/fastdata
   2165997 requests in 30.04s, 454.44MB read
 Requests/sec:  72104.34
 Transfer/sec:     15.13MB
+```
 
 ### UndertowIO
+[UndertowIO](http://undertow.io/)
 
+```
 miki@miki-Pepino:~/wrk$ ./wrk -t4 -c500 -d30s "http://localhost:8082/fastdata"
 Running 30s test @ http://localhost:8082/fastdata
   4 threads and 500 connections
@@ -39,4 +57,5 @@ Running 30s test @ http://localhost:8082/fastdata
   6692640 requests in 30.03s, 1.68GB read
 Requests/sec: 222888.38
 Transfer/sec:     57.39MB
+```
 
