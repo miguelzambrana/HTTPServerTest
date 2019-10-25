@@ -11,9 +11,27 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    // SimpleFramework
     compile('org.simpleframework:simple:5.1.6')
+
+    // Spark
     compile('com.sparkjava:spark-core:2.5.4')
-    compile('io.undertow:undertow-core:1.2.11.Final')
-    compile('io.undertow:undertow-servlet:1.2.11.Final')
-    compile('io.undertow:undertow-websockets-jsr:1.2.11.Final')
+
+    // Undertow
+    // compile('io.undertow:undertow-core:1.2.11.Final')
+    // compile('io.undertow:undertow-servlet:1.2.11.Final')
+    // compile('io.undertow:undertow-websockets-jsr:1.2.11.Final')
+
+    // Undertow 2
+    compile('io.undertow:undertow-core:2.0.1.Final')
+    compile('io.undertow:undertow-servlet:2.0.1.Final')
+    compile('io.undertow:undertow-websockets-jsr:2.0.1.Final')
+
+    // Rapidoid
+    //compile('org.rapidoid:rapidoid-quick:5.5.5')
+    compile group: 'org.rapidoid', name: 'rapidoid-http-server', version: '5.5.5'
+
+    // Light 4J
+    compile group: 'com.networknt', name: 'light-4j', version: '2.0.6', ext: 'pom'
 }

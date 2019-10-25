@@ -13,6 +13,8 @@ public class FastUndertowIO {
     public static void main(final String[] args) {
         Undertow server = Undertow.builder()
                 .addHttpListener(8082, "localhost")
+                .setIoThreads(8)
+                .setWorkerThreads(16)
                 .setHandler(new HttpHandler() {
                     @Override
                     public void handleRequest(final HttpServerExchange exchange) throws Exception {
